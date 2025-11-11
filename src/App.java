@@ -4,22 +4,21 @@ import test.PersonaControllerTest;
 
 public class App {
     public static void main(String[] args) throws Exception {
-
-    }
-
-    public static Person[] makePersonList() {
         PersonController personController= new PersonController();
-    
-        Person[] personas = new makePersonList();
+        Person[] personas = makePersonList();
         for (int i = 0; i < personas.length; i++) {
             System.out.println(personas[i]);
         }
-
+        System.out.println(" ");
         personController.sortByName(personas);
         for (int i = 0; i < personas.length; i++) {
             System.out.println(personas[i]);
         }
 
+    }
+
+    public static Person[] makePersonList() {
+        
         Person[] people = new Person[20];
         people[0] = new Person("Alice", 30);
         people[1] = new Person("Bob", 25);
@@ -42,8 +41,9 @@ public class App {
         people[18] = new Person("Sam", 20);
         people[19] = new Person("Tina", 39);
         return people;
-
         
+
+    
     }
 
 }
